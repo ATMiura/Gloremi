@@ -1,0 +1,85 @@
+.tab_title {
+  text-align: center; }
+  .tab_title h2 {
+    margin-bottom: 15px; }
+
+.tab_nav {
+  margin-bottom: 60px; }
+  .tab_nav .tab_nav_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .tab_nav .tab_nav_item {
+    /*flex: 0 0 220px;*/
+    cursor: pointer; }
+    .tab_nav .tab_nav_item .tab_nav_item_link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*padding: 0 17px;*/
+      margin: 0 17px;
+      padding: 10px 50px;
+      font-size: 0.8125rem;
+      line-height: 1rem;
+      font-weight: bold;
+      color: var(--color-text);
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      height: 50px; }
+    .tab_nav .tab_nav_item:hover .tab_nav_item_link {
+      color: var(--color-sand); }
+    .tab_nav .tab_nav_item.active .tab_nav_item_link {
+      color: var(--color-gr);
+      border: 1.5px solid #2E6D5C;
+      box-sizing: border-box;
+      border-radius: 55px; }
+
+.tab_pane {
+  display: block;
+  height: 0;
+  visibility: hidden; }
+  .tab_pane .product_container {
+    display: block; }
+
+.tab_pane.active {
+  height: auto;
+  visibility: visible; }
+
+@media (max-width: 991px) {
+  .tab_nav .tab_nav_list {
+    flex-wrap: wrap; }
+    .tab_nav .tab_nav_list .tab_nav_item {
+      flex: 0 0 50%;
+      margin: 10px 0;
+      text-align: center; } }
+@media (max-width: 575px) {
+  .tab_nav {
+    margin-bottom: 30px; }
+    .tab_nav .tab_nav_list {
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      justify-content: flex-start;
+      padding-bottom: 10px; }
+      .tab_nav .tab_nav_list .tab_nav_item_link {
+        min-width: max-content;
+        height: 40px;
+        font-size: 0.625rem;
+        line-height: 0.75rem; }
+
+  .tab_content {
+    padding: 0 15px; }
+    .tab_content .slick-track {
+      margin: 0 -2.5px; }
+    .tab_content .product_card {
+      margin: 0 2.5px; }
+      .tab_content .product_card .product_card_inner {
+        padding: 10px 0; }
+
+  .slider_bar .slider_counter {
+    margin: 0 35px; } }
+
+/*# sourceMappingURL=tabs.css.map */

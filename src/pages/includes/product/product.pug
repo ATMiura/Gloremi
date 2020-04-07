@@ -1,0 +1,69 @@
+.product.mb-145
+  .grid-container
+    .grid-row
+      .grid-col-lg-7.grid-col-12.product_slider
+        .product_banners
+          .product_banner.product_banner_hit
+            svg(width='48', height='48', viewBox='0 0 48 48')
+              circle(cx='24', cy='24', r='22')
+            span.product_banner_text хит
+          .product_banner.product_banner_new
+            svg(width='48', height='48', viewBox='0 0 48 48')
+              circle(cx='24', cy='24', r='22')
+            span.product_banner_text новинка
+          .product_banner.product_banner_sale
+            svg(width='48', height='48', viewBox='0 0 48 48')
+              circle(cx='24', cy='24', r='22')
+            span.product_banner_text
+              | sale
+              span.product_banner_val -15%
+        .product_slider_for
+          .product_slider_item
+            img(src='img/product_detail_slider_for_img.png', alt='')
+          .product_slider_item
+            img(src='img/product_detail_slider_for_img.png', alt='')
+          .product_slider_item
+            img(src='img/product_detail_slider_for_img.png', alt='')
+          .product_slider_item
+            img(src='img/product_detail_slider_for_img.png', alt='')
+          .product_slider_item
+            img(src='img/product_detail_slider_for_img.png', alt='')
+        .product_slider_nav
+          .product_slider_item
+            img(src='img/product_slider_nav_img_1.png', alt='')
+          .product_slider_item
+            img(src='img/product_slider_nav_img_2.png', alt='')
+          .product_slider_item
+            img(src='img/product_slider_nav_img_3.png', alt='')
+          .product_slider_item
+            img(src='img/product_slider_nav_img_1.png', alt='')
+          .product_slider_item
+            img(src='img/product_slider_nav_img_2.png', alt='')
+      .grid-col-lg-5.grid-col-12.product_info
+        .product_descr
+          p
+            | Бюджетный аппарат для ультразвуковой чистки лица в домашних условиях GEZATONE BIO SONIC 730 предназначен для глубокого очищения кожи, тонизации, улучшения внешнего вида кожных покровов и усиления эффективности используемых косметических препаратов.
+          a.full
+            | Полное описание
+        .product_price_count
+          .product_price
+            .product_price_item.product_price_base
+              | 13 500 Р
+            .product_price_item.product_price_discount
+              | 9 999 Р
+          .product_count
+        .product_btns
+          a.btn.btn_fill Купить
+          a.btn.btn_bordered Купить в 1 клик
+        .product_del_pay
+          include ../../common/dropdown_city
+          .product_del_pay_item
+            .product_del_pay_title
+              | Курьерская доставка
+            .product_del_pay_text
+              | 30 руб. 5-9 рабочих дней
+          .product_del_pay_item
+            .product_del_pay_title
+              | Оплата
+            .product_del_pay_text
+              | Оплата на сайте - Банковские карты, Apple Pay, Google Pay

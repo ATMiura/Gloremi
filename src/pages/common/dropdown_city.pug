@@ -1,0 +1,27 @@
+.dropdown_box.dropdown_city
+  .dropdown_current
+    .dropdown_city_icon
+      img(src='img/dropdown_city.svg', alt='')
+    .dropdown_city_cur_box
+      span Доставка в город:
+      .dropdown_current_text
+        | Краснодар
+        .dropdown_arrow
+          img(src='img/dropdown_arrow.svg', alt='')
+  ul#dropdown_city_list.dropdown_list
+    .search_form.dropdown_city_search
+      .form_group
+        label.label(for='dropdown_city_search')
+          input#dropdown_city_search.search_form_input.input(type='text', placeholder='Введите название вашего города:')
+    li.dropdown_item
+      a.dropdown_item_link.checked Краснодар
+    li.dropdown_item.checked
+      a.dropdown_item_link Москва
+    li.dropdown_item
+      a.dropdown_item_link Санкт-петербург
+    li.dropdown_item
+      a.dropdown_item_link Ростов-на-дону
+    li.dropdown_item
+      a.dropdown_item_link Сочи
+    li.dropdown_item
+      a.dropdown_item_link Александровск-Сахалинский

@@ -1,0 +1,33 @@
+.catalog{
+
+  .catalog_filter{
+
+  }
+  .catalog_sort_count{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    .catalog_sort{
+      margin-right: 40px;
+    }
+    .catalog_product_count{
+      display: flex;
+      align-items: center;
+
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+
+      color: var(--color-sand);
+    }
+  }
+
+  .catalog_products{
+
+    .product_container{
+      .product_card{
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+      }
+    }
+  }
+}

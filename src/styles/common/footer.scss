@@ -1,0 +1,258 @@
+.footer{
+  &:before{
+    content: "";
+    display: block;
+    max-width: 1400px;
+    width: 100%;
+    height: 1px;
+    background: #F4F4F4;
+    margin: 0 auto;
+    margin-bottom: 95px;
+  }
+  .footer_lvl_1{
+    margin-bottom: 80px;
+    .f_col{
+      .f_col_inner{
+        .f_col_title{
+          margin-bottom: 20px;
+          h4{
+            margin-bottom: 0;
+          }
+        }
+        .f_menu_list{
+          list-style: none;
+          padding: 0;
+          .f_menu_item{
+
+          }
+          .f_menu_link{
+            font-size: .8125rem;
+            font-weight: 500;
+            line-height: 1.875rem;
+            color: var(--color-text);
+            text-decoration: none;
+          }
+        }
+      }
+      .f_col_text{
+        margin-top: 25px;
+        font-size: .8125rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .footer_lvl_2{
+    position: relative;
+    padding-bottom: 75px;
+    &:before{
+      content: "";
+      display: block;
+      max-width: 1400px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: #F4F4F4;
+    }
+    .f_logo{
+      text-align: center;
+      margin-top: -60px;
+      margin-bottom: 60px;
+    }
+    .f_lvl_2_item{
+      a{
+        text-decoration: none;
+      }
+      &:hover .f_lvl_2_item_title{
+        color: var(--color-sand);
+      }
+      &:hover svg,
+      &:hover svg path{
+        stroke: var(--color-sand);
+        fill: var(--color-sand);
+      }
+      &:hover .f_lvl_2_item_line{
+        background: var(--color-sand) !important;
+      }
+      .f_lvl_2_item_title{
+        font-family: "Prata";
+        font-size: 1.5625rem;
+        line-height: 2.125rem;
+        color: var(--color-gr);
+        text-transform: uppercase;
+        margin-left: 32px;
+        margin-bottom: -20px;
+
+        position: relative;
+        z-index: 2;
+      }
+      .f_lvl_2_item_icon_line{
+        display: flex;
+        align-items: center;
+        .f_lvl_2_item_icon{
+          background: #fff;
+          border-radius: 100%;
+          width: 85px;
+          min-width: 85px;
+          height: 85px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .f_lvl_2_item_line{
+          display: block;
+          max-width: 320px;
+          width: 100%;
+          height: 1.5px;
+          background: var(--color-dark-gr);
+          margin-left: -10px;
+        }
+      }
+    }
+    .f_lvl_2_politics,
+    .f_payment{
+      font-size: .625rem;
+      line-height: 1.125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      p{
+        margin-bottom: 7px;
+      }
+    }
+    .f_payment{
+      margin-top: 40px;
+      text-align: center;
+      p{
+        margin-bottom: 20px;
+      }
+      .f_paypment_items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .f_paypment_item{
+          margin: 0 16px;
+        }
+      }
+    }
+  }
+  .footer_lvl_3{
+    background: #fff;
+    padding: 17px 0;
+  }
+}
+
+@media(max-width: 1199px){
+  .footer{
+    .footer_lvl_1 {
+      margin-bottom: 50px;
+    }
+    .footer_lvl_2{
+      padding-bottom: 50px;
+      .f_logo {
+        margin-bottom: 30px;
+      }
+      .f_payment {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media(max-width: 991px){
+  .f_col{
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 767px){
+  .footer{
+    &:before{
+      margin-bottom: 70px;
+    }
+    .footer_lvl_2{
+      padding-bottom: 50px;
+      .f_logo{
+        margin-bottom: 30px;
+      }
+      .f_lvl_2_item_social{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media(min-width: 576px){
+  .f_col_title{
+    .dropdown_arrow{
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 575px){
+  .footer{
+    &:before{
+      margin-bottom: 45px;
+    }
+    .footer_lvl_1{
+      .f_col {
+        margin-bottom: 20px;
+        .f_col_inner{
+          .f_col_title{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+          }
+          .f_menu_list{
+            margin: 0;
+            display: none;
+          }
+        }
+        &:last-child{
+          .f_col_title{
+            display: none;
+          }
+        }
+      }
+    }
+    .footer_lvl_2{
+      padding-bottom: 30px;
+      .f_logo{
+        margin-top: -50px;
+        img{
+          max-width: 135px;
+        }
+      }
+      .f_lvl_2_item{
+        margin-bottom: 20px;
+        .f_lvl_2_item_title{
+          font-size: 1rem;
+          line-height: 1.375rem;
+          margin-left: 15px;
+          margin-bottom: -10px;
+        }
+        .f_lvl_2_item_icon_line{
+          .f_lvl_2_item_icon{
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+          }
+        }
+      }
+      .f_lvl_2_politics{
+        margin-top: 10px;
+      }
+      .f_payment {
+        margin-top: 5px;
+        text-align: center;
+        p{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

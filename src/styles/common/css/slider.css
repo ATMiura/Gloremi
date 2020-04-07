@@ -1,0 +1,165 @@
+@charset "UTF-8";
+.slider {
+  position: relative; }
+
+.slider_counter {
+  position: relative;
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .slider_counter > div {
+    width: min-content; }
+  .slider_counter .slider_counter_circle {
+    max-height: 55px; }
+  .slider_counter .slider_counter_inner {
+    background: url("../../img/slider_counter_circle.svg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: "Prata";
+    color: var(--color-sand);
+    min-width: 55px;
+    min-height: 55px; }
+    .slider_counter .slider_counter_inner .current {
+      font-size: 1.3rem;
+      line-height: 1;
+      color: var(--color-gr);
+      width: calc(100% - 3px);
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 5px; }
+    .slider_counter .slider_counter_inner .separator_total {
+      position: absolute;
+      top: 11px;
+      right: -15px; }
+      .slider_counter .slider_counter_inner .separator_total .total {
+        font-size: .875rem;
+        line-height: 1.25rem; }
+
+.slider_arrows {
+  position: relative;
+  display: flex; }
+
+.slick-arrow {
+  position: relative;
+  width: 80px;
+  height: 26px;
+  top: 0;
+  transform: none; }
+  .slick-arrow:before {
+    display: none; }
+
+.slick-prev {
+  left: 0; }
+
+.slick-next {
+  right: 0; }
+
+.slider_img img {
+  margin: 0 auto; }
+
+/* чтобы слайдеры не прыгали при загрузке */
+.main_slider_for,
+.main_slider_nav,
+.main_slider .product_container {
+  opacity: 0; }
+
+.main_slider_for.slick-initialized,
+.main_slider_nav.slick-initialized,
+.main_slider .product_container.slick-initialized {
+  opacity: 1; }
+
+/* слайдер на главной */
+.main_slider_img {
+  position: relative; }
+
+.main_slider_content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+  .main_slider_content .grid-container,
+  .main_slider_content .grid-row {
+    height: 100%; }
+  .main_slider_content .slick-prev {
+    margin-right: 30px; }
+  .main_slider_content .slick-next {
+    margin-left: 30px; }
+  .main_slider_content .main_slider_content_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 70px; }
+
+/* слайдер в табах */
+.slider_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .slider_bar .slider_counter {
+    margin: 0 85px; }
+  .slider_bar .slider_arrow_prev,
+  .slider_bar .slider_arrow_next {
+    position: relative;
+    display: block !important; }
+
+@media (max-width: 1199px) {
+  .main_slider_content .main_slider_content_col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start; }
+  .main_slider_content .main_slider_item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical; }
+  .main_slider_content .slider_counter {
+    margin-bottom: 20px; }
+  .main_slider_content .slider_arrows {
+    margin-top: 20px; } }
+@media (max-width: 991px) {
+  .main_slider_content .slider_counter .slider_counter_inner {
+    min-width: 45px;
+    min-height: 45px; }
+    .main_slider_content .slider_counter .slider_counter_inner .slider_counter {
+      margin-bottom: 0; }
+      .main_slider_content .slider_counter .slider_counter_inner .slider_counter .current {
+        font-size: 1rem;
+        padding-top: 0; }
+  .main_slider_content .main_slider_content_col {
+    justify-content: space-between; }
+  .main_slider_content .main_slider_item h2 {
+    margin-bottom: 0; }
+  .main_slider_content .main_slider_item p {
+    -webkit-line-clamp: 3; } }
+@media (max-width: 575px) {
+  .main_slider {
+    background-color: var(--color-light-pers);
+    position: relative;
+    padding: 50px 15px 35px 15px; }
+
+  .main_slider_content_col {
+    position: initial;
+    padding-top: 25px; }
+
+  .main_slider_content {
+    position: initial; }
+    .main_slider_content .main_slider_item h2 {
+      font-size: 1.875rem;
+      line-height: 2.5rem; }
+    .main_slider_content .main_slider_item p {
+      -webkit-line-clamp: 2; }
+    .main_slider_content .slider_counter {
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+
+  .slider_arrows {
+    justify-content: space-between; } }
+
+/*# sourceMappingURL=slider.css.map */

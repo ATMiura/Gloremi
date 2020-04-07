@@ -1,0 +1,169 @@
+.footer:before {
+  content: "";
+  display: block;
+  max-width: 1400px;
+  width: 100%;
+  height: 1px;
+  background: #F4F4F4;
+  margin: 0 auto;
+  margin-bottom: 95px; }
+.footer .footer_lvl_1 {
+  margin-bottom: 80px; }
+  .footer .footer_lvl_1 .f_col .f_col_inner .f_col_title {
+    margin-bottom: 20px; }
+    .footer .footer_lvl_1 .f_col .f_col_inner .f_col_title h4 {
+      margin-bottom: 0; }
+  .footer .footer_lvl_1 .f_col .f_col_inner .f_menu_list {
+    list-style: none;
+    padding: 0; }
+    .footer .footer_lvl_1 .f_col .f_col_inner .f_menu_list .f_menu_link {
+      font-size: .8125rem;
+      font-weight: 500;
+      line-height: 1.875rem;
+      color: var(--color-text);
+      text-decoration: none; }
+  .footer .footer_lvl_1 .f_col .f_col_text {
+    margin-top: 25px;
+    font-size: .8125rem;
+    font-weight: 500; }
+.footer .footer_lvl_2 {
+  position: relative;
+  padding-bottom: 75px; }
+  .footer .footer_lvl_2:before {
+    content: "";
+    display: block;
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #F4F4F4; }
+  .footer .footer_lvl_2 .f_logo {
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 60px; }
+  .footer .footer_lvl_2 .f_lvl_2_item a {
+    text-decoration: none; }
+  .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_title {
+    font-family: "Prata";
+    font-size: 1.5625rem;
+    line-height: 2.125rem;
+    color: var(--color-gr);
+    text-transform: uppercase;
+    margin-left: 32px;
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 2; }
+  .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_icon_line {
+    display: flex;
+    align-items: center; }
+    .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_icon_line .f_lvl_2_item_icon {
+      background: #fff;
+      border-radius: 100%;
+      width: 85px;
+      min-width: 85px;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_icon_line .f_lvl_2_item_line {
+      display: block;
+      max-width: 320px;
+      width: 100%;
+      height: 1.5px;
+      background: var(--color-dark-gr);
+      margin-left: -10px; }
+  .footer .footer_lvl_2 .f_lvl_2_politics,
+  .footer .footer_lvl_2 .f_payment {
+    font-size: .625rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; }
+    .footer .footer_lvl_2 .f_lvl_2_politics p,
+    .footer .footer_lvl_2 .f_payment p {
+      margin-bottom: 7px; }
+  .footer .footer_lvl_2 .f_payment {
+    margin-top: 40px;
+    text-align: center; }
+    .footer .footer_lvl_2 .f_payment p {
+      margin-bottom: 20px; }
+    .footer .footer_lvl_2 .f_payment .f_paypment_items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .footer .footer_lvl_2 .f_payment .f_paypment_items .f_paypment_item {
+        margin: 0 16px; }
+.footer .footer_lvl_3 {
+  background: #fff;
+  padding: 17px 0; }
+
+@media (max-width: 1199px) {
+  .footer .footer_lvl_1 {
+    margin-bottom: 50px; }
+  .footer .footer_lvl_2 {
+    padding-bottom: 50px; }
+    .footer .footer_lvl_2 .f_logo {
+      margin-bottom: 30px; }
+    .footer .footer_lvl_2 .f_payment {
+      margin-top: 20px;
+      text-align: center; } }
+@media (max-width: 991px) {
+  .f_col {
+    margin-bottom: 30px; } }
+@media (max-width: 767px) {
+  .footer:before {
+    margin-bottom: 70px; }
+  .footer .footer_lvl_2 {
+    padding-bottom: 50px; }
+    .footer .footer_lvl_2 .f_logo {
+      margin-bottom: 30px; }
+    .footer .footer_lvl_2 .f_lvl_2_item_social {
+      margin-bottom: 40px; } }
+@media (min-width: 576px) {
+  .f_col_title .dropdown_arrow {
+    display: none; } }
+@media (max-width: 575px) {
+  .footer:before {
+    margin-bottom: 45px; }
+  .footer .footer_lvl_1 .f_col {
+    margin-bottom: 20px; }
+    .footer .footer_lvl_1 .f_col .f_col_inner .f_col_title {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between; }
+    .footer .footer_lvl_1 .f_col .f_col_inner .f_menu_list {
+      margin: 0;
+      display: none; }
+    .footer .footer_lvl_1 .f_col:last-child .f_col_title {
+      display: none; }
+  .footer .footer_lvl_2 {
+    padding-bottom: 30px; }
+    .footer .footer_lvl_2 .f_logo {
+      margin-top: -50px; }
+      .footer .footer_lvl_2 .f_logo img {
+        max-width: 135px; }
+    .footer .footer_lvl_2 .f_lvl_2_item {
+      margin-bottom: 20px; }
+      .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_title {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        margin-left: 15px;
+        margin-bottom: -10px; }
+      .footer .footer_lvl_2 .f_lvl_2_item .f_lvl_2_item_icon_line .f_lvl_2_item_icon {
+        width: 50px;
+        min-width: 50px;
+        height: 50px; }
+    .footer .footer_lvl_2 .f_lvl_2_politics {
+      margin-top: 10px; }
+    .footer .footer_lvl_2 .f_payment {
+      margin-top: 5px;
+      text-align: center; }
+      .footer .footer_lvl_2 .f_payment p {
+        margin-bottom: 10px; } }
+
+/*# sourceMappingURL=footer.css.map */

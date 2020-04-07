@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.block_video {
+  padding-top: 160px;
+  padding-bottom: 150px;
+  position: relative; }
+  .block_video:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: url("../../img/block_video_bg.png") no-repeat top left; }
+
+.col_descr {
+  position: relative;
+  padding-left: 87px; }
+  .col_descr:before {
+    content: 'Видео';
+    display: block;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-family: 'Prata', serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--color-sand);
+    text-transform: uppercase; }
+
+@media (max-width: 1199px) {
+  .block_video {
+    padding: 70px 0; }
+
+  .col_descr {
+    padding-left: 40px; }
+    .col_descr:before {
+      left: 0; } }
+@media (max-width: 991px) {
+  .block_video {
+    padding: 50px 0; }
+    .block_video:before {
+      display: none; }
+    .block_video .col_video {
+      margin-bottom: 30px; }
+    .block_video .col_descr:before {
+      top: 20px; } }
+@media (max-width: 575px) {
+  .block_video .col_video {
+    margin-bottom: 20px; }
+
+  .col_descr {
+    padding-left: 17px; }
+    .col_descr:before {
+      display: none; } }
+
+/*# sourceMappingURL=block_video.css.map */

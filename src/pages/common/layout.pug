@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+  block head
+    head
+      meta(charset='utf-8')
+      meta(content="ie=edge" http-equiv="x-ua-compatible")
+      meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      link(href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Prata&display=swap', rel='stylesheet')
+      link(rel='stylesheet', href='css/styles.css')
+      title Gloremi
+  body
+    block header
+      include header
+
+    main
+      .content
+        block content
+
+    block footer
+      include footer
