@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
     /* слайдер на главной */
-    $('.main_slider_for').slick({
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.main_slider_nav',
-        fade: true,
-        arrows: false,
-    });
+    //$('.main_slider_for').slick({
+    //    dots: false,
+    //    infinite: false,
+    //    speed: 500,
+    //    slidesToShow: 1,
+    //    slidesToScroll: 1,
+    //    asNavFor: '.main_slider_nav',
+    //    fade: true,
+    //    arrows: false,
+    //});
 
     //var slider_1_el = $('.main_slider_nav');
     $('.main_slider_nav').on('init afterChange', function (event, slick, currentSlide) {
@@ -21,9 +21,9 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        slide: '.main_slider_item',
-        asNavFor: '.main_slider_for',
-        fade: false,
+        slide: '.slider_item',
+        //asNavFor: '.main_slider_for',
+        fade: true,
         swipe: true,
         dots: false,
         arrows: true,

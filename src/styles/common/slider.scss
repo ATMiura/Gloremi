@@ -92,18 +92,23 @@
 
 
   /* слайдер на главной */
-  .main_slider_img{
+  .main_slider{
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
-  }
-  .main_slider_content{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    .grid-container,
-    .grid-row{
-      height: 100%;
+    .slider_item{
+      position: relative;
+    }
+    .slider_img{
+      position: relative;
+    }
+    .slider_text{
+      position: absolute;
+      top: 180px;
+      left: 50px;
+      width: 100%;
+      max-width: 340px;
+      z-index: 1;
     }
     .slick-prev{
       margin-right: 30px;
@@ -111,12 +116,17 @@
     .slick-next{
       margin-left: 30px;
     }
-    .main_slider_content_col{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-top: 80px;
-      padding-bottom: 70px;
+    .slider_counter{
+      position: absolute;
+      z-index: 5;
+      top: 80px;
+      left: 50px;
+    }
+    .slider_arrows{
+      position: absolute;
+      bottom: 70px;
+      left: 50px;
+      z-index: 5;
     }
   }
 
