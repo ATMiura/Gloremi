@@ -15,12 +15,16 @@
   flex: 0 0 25%;
 }
 .product_card {
-
+  max-width: 25%;
+  flex: 0 0 25%;
 }
   .product_card_inner{
     text-align: center;
     position: relative;
     padding: 25px 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
     }
     .product_img{
       margin-bottom: 20px;
@@ -65,16 +69,23 @@
       }
     }
     .product_cart{
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      border-radius: 100%;
-      &:hover{
-        background: var(--color-light-sand);
-        cursor: pointer;
+      a{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 100%;
+        outline: none;
+        &:hover,
+        &.in_cart{
+          background: var(--color-light-sand);
+          cursor: pointer;
+        }
+      }
+      img{
+        outline: none;
       }
     }
 
@@ -170,7 +181,7 @@
     }
   }
   .product_banner_text {
-    background: #fff;
+    /*background: #fff;*/
     position: relative;
     z-index: 2;
     padding-top: 3px;
@@ -278,7 +289,7 @@
         margin-bottom: 20px;
       }
       .product_del_pay_item{
-        flex-basis: initial;
+        flex-basis: 50%;
         font-size: 0.875rem;
         line-height: 1.625rem;
         .product_del_pay_title{
@@ -310,6 +321,10 @@
     left: 0;
     right: 0;
     background: #FBFBFB;
+  }
+  .tab_nav_list{
+    /*max-width: 670px;
+    margin: 0 auto;*/
   }
   .product_tab_descr{
     .product_chars{
@@ -356,15 +371,6 @@
       }
       .text{
         margin-left: 50px;
-      }
-    }
-  }
-  .rating{
-    .rating_stars{
-      display: flex;
-      justify-content: center;
-      .rating_star{
-        margin: 0 2.5px;
       }
     }
   }
@@ -467,6 +473,18 @@
   }
 }
 
+.rating{
+  .rating_stars{
+    display: flex;
+    justify-content: center;
+    .rating_star{
+      margin: 0 2.5px;
+      &.filled svg{
+        fill: #D6B68A;
+      }
+    }
+  }
+}
 
 @media(max-width: 1299px){
   .product{

@@ -3,6 +3,18 @@
   h4{
     margin-bottom: 35px;
   }
+  .politics{
+    /*margin-top: 40px;
+    margin-bottom: 30px;*/
+
+    font-weight: 500;
+    font-size: 0.688rem;
+    line-height: 1rem;
+    a{
+      margin-left: 5px;
+      color: var(--color-gold);
+    }
+  }
 }
 .form_row{
   display: -webkit-box;
@@ -12,6 +24,11 @@
   flex-wrap: wrap;
   margin-right: -7.5px;
   margin-left: -7.5px;
+  &:last-child{
+    .form_group:last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 .form_group{
   position: relative;
@@ -40,9 +57,48 @@
   font-size: .875rem !important;
   font-weight: 600;
   line-height: 1.5rem !important;
+  &::placeholder{
+    color: var(--color-text);
+  }
 }
 .input{
   height: 2.5rem;
+  &.checkbox,
+  &.radio{
+    display: none;
+  }
+  &.checkbox ~ label,
+  &.radio ~ label{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+  }
+  &.checkbox ~ label:before,
+  &.checkbox ~ label:after,
+
+  &.radio ~ label:before,
+  &.radio ~ label:after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: inline-block;
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--color-text);
+    background: #fff;
+  }
+  &.checkbox:checked ~ label:after{
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.46154 5.5L1.15385 3.25L0 4.375L2.30769 6.625L3.46154 7.75L4.61538 6.625L10 1.375L8.84615 0.25L3.46154 5.5Z' fill='%232E6D5C'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+  }
+  &.radio:checked ~ label:after{
+
+  }
 }
 .label{
   &.label_placeholder{
@@ -92,6 +148,7 @@
     -moz-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    margin-bottom: 0;
     &.active{
       /*display: block;*/
       width: 100%;
@@ -104,12 +161,15 @@
     .input{
       border-bottom: 1px solid var(--color-sand);
     }
-    .label
+    .label,
     .input::placeholder{
       font-weight: 500;
       font-size: .6875rem;
       line-height: 1.5rem;
       color: var(--color-sand);
+    }
+    .label{
+      width: 100%;
     }
     .input:focus~.label_placeholder{
       font-size: .5rem !important;
@@ -136,6 +196,8 @@
         padding-bottom: 10px;
         margin-bottom: 15px;
         border-bottom: 1px solid #F4F4F4;
+        color: #353939;
+        text-decoration: none;
         &:last-child{
           margin-bottom: 0;
         }
@@ -209,5 +271,83 @@
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+}
+
+.modal_custom{
+  .fancybox-bg{
+    background: transparent;
+  }
+  .fancybox-slide{
+    padding: 50px;
+  }
+}
+.modal{
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: rgba(46, 109, 92, 0.95);
+  .grid-container,
+  .grid-row{
+    height: 100%;
+  }
+  &_col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &_inner{
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  &_title{
+    margin-bottom: 35px;
+    h2{
+      //font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  &_subtitle{
+    font-family: 'Prata', serif;
+    font-size: .875rem;
+    line-height: 1.188rem;
+    color: var(--color-gold);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .input,
+  .textarea{
+    background: transparent;
+    border-bottom-color: #fff;
+    color: #fff;
+    &::placeholder{
+      font-size: 0.875rem;
+      line-height: inherit;
+      font-weight: normal;
+      color: #fff;
+      /*text-align: center;*/
+    }
+    &[type='tel']{
+      font-size: 1.125rem !important;
+      line-height: 26px !important;
+    }
+  }
+  .label_placeholder{
+    /*text-align: center;*/
+  }
+  .checkbox ~ label:before,
+  .checkbox ~ label:after{
+    border-color: #fff;
+  }
+  .checkbox:checked ~ label:after{
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.46154 5.5L1.15385 3.25L0 4.375L2.30769 6.625L3.46154 7.75L4.61538 6.625L10 1.375L8.84615 0.25L3.46154 5.5Z' fill='%232E6D5C'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
   }
 }

@@ -1,0 +1,55 @@
+.contacts{
+  position: relative;
+  padding-top: 50px;
+  &:before{
+    content: "";
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    min-height: 325px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/foliage_small.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  &_box{
+    position: relative;
+  }
+  &_inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 410px;
+    background-color: #fff;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    .tel_block,
+    .address_block{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: 500;
+      [class*="icon_"]{
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      .tel_descr{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+      }
+    }
+    .tel_block{
+      margin-bottom: 20px;
+    }
+  }
+  &_map{
+    height: 600px;
+    margin: 0 -7.5px;
+  }
+}

@@ -28,17 +28,17 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         appendArrows: $('.main_slider_nav + .slider_arrows'),
-        prevArrow:"<button type='button' class='slick-prev slick-arrow'><svg width=\"81\" height=\"28\" viewBox=\"0 0 81 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+        prevArrow: "<button type='button' class='slick-prev slick-arrow'><svg width=\"81\" height=\"28\" viewBox=\"0 0 81 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
             "<path d=\"M80.4092 14.0141L1.40918 14.0141M16.0808 26.8911L1.00021 13.7543M16.0808 1.00013L1.00021 14.137\" stroke=\"#305D51\" stroke-width=\"1.5\"/>\n" +
             "</svg></button>",
-        nextArrow:"<button type='button' class='slick-next slick-arrow'><svg width=\"80\" height=\"28\" viewBox=\"0 0 80 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+        nextArrow: "<button type='button' class='slick-next slick-arrow'><svg width=\"80\" height=\"28\" viewBox=\"0 0 80 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
             "<path d=\"M0 13.877H79M64.3284 1L79.409 14.1369M64.3284 26.891L79.409 13.7541\" stroke=\"#305D51\" stroke-width=\"1.5\"/>\n" +
             "</svg></button>",
     });
 
     $(".main_slider_nav").on('init afterChange', function (event, slick, currentSlide) {
-        $('.current').text(currentSlide < 9 ? `O${currentSlide + 1}` : currentSlide + 1);
-        $('.total').text(slick.slideCount);
+        $('.main_slider_content .current').text(currentSlide < 9 ? `O${currentSlide + 1}` : currentSlide + 1);
+        $('.main_slider_content .total').text(slick.slideCount);
     });
 
     /* слайдер в табах */

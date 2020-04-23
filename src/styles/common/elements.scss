@@ -10,6 +10,7 @@
   --color-pers: #CE8A88;
   --color-light-pers: #F5EADF;
   --color-soft-pink: #FFEBE6;
+  --color-gold: #D6B68A;
 }
 
 .ovf_h{
@@ -17,15 +18,30 @@
 }
 
 .gr{
-  fill: var(--color-gr);
-  color: var(--color-gr);;
+  color: var(--color-gr);
+  path{
+    //fill: var(--color-gr);
+    stroke: var(--color-gr);
+  }
+  circle{
+    stroke: var(--color-gr);
+  }
 }
 .sand{
-  fill: var(--color-sand);
   color: var(--color-sand);
+  path{
+    //fill: var(--color-sand);
+    stroke: var(--color-sand);
+  }
+  circle{
+    stroke: var(--color-sand);
+  }
 }
 .light-pers{
   background: var(--color-light-pers);
+}
+.gold{
+  color: var(--color-gold);
 }
 
 .gr_link{
@@ -40,6 +56,13 @@
 .mb-145{
   margin-bottom: 145px;
 }
+.m_center{
+  margin: 0 auto;
+}
+.w_100{
+  width: 100% !important;
+  max-width: 100% !important;
+}
 
 .text{
   font-size: 0.875rem;
@@ -47,9 +70,13 @@
   font-weight: 600;
 }
 
+
 /* иконки */
 .icon_tel{
   max-height: 35px;
+}
+.icon_address{
+
 }
 .icon_loupe{
   border: 0;
@@ -158,14 +185,33 @@
     background: var(--color-gr);
     color: #fff;
   }
-}
-.btn_bordered{
-  border-color: #2E6D5C;
-}
-.btn_fill{
-  background: var(--color-gr);
-  border-color: #2E6D5C;
-  color: #fff;
+  &_bordered{
+    border-color: #2E6D5C;
+  }
+  &_fill{
+    background: var(--color-gr);
+    border-color: #2E6D5C;
+    color: #fff;
+  }
+  &_gold{
+    &_bordered{
+      border-color: var(--color-gold);
+      color: #fff;
+      background: transparent;
+      &:hover{
+        background: var(--color-gold);
+        color: var(--color-gr);
+      }
+    }
+    &_fill{
+      background: var(--color-gold);
+      &:hover{
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: #F5CC93;
+      }
+    }
+  }
+
 }
 
 /* заголовок страницы */
@@ -262,7 +308,8 @@
 }
 
 /* кнопка подробнее/читать дальше */
-a.more{
+a.more,
+a.back{
   display: flex;
   align-items: center;
 
@@ -279,6 +326,14 @@ a.more{
   &:hover svg path{
     color: var(--color-sand);
     stroke: var(--color-sand);
+  }
+}
+a.back{
+  justify-content: center;
+  margin-top: 15px;
+  & svg{
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
 
@@ -439,6 +494,9 @@ a.more{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .disabled{
+    pointer-events: none;
+  }
   .pagination_left_arrow{
 
   }
@@ -474,6 +532,8 @@ a.more{
      .pagination_item_link{
        padding: 10px 17px;
        cursor: pointer;
+       color: inherit;
+       text-decoration: none;
      }
      &.active{
        .pagination_item_link{

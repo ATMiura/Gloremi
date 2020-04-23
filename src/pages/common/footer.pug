@@ -124,7 +124,113 @@ footer.footer
           a(href='')
             img(src='img/iarga.svg', alt='')
 
+
+.modal(id='modal_login')
+  .grid-container
+    .grid-row
+      .grid-col-md-6.offset-md-3.grid-col-sm-6.offset-sm-3.grid-col-12.modal_col
+        .modal_inner
+          .modal_title
+            h2 Войти в кабинет
+            p.modal_subtitle по номеру вашего телефона:
+          form.form(id='login')
+            .form_row
+              .grid-col-12
+                .form_group
+                  input.input.text-center(type='tel', id='login_tel', placeholder='Телефон')
+            .form_row
+              .grid-col-12
+                .form_group
+                  .politics
+                    input.input.checkbox(type='checkbox', name='login_politics', id='login_politics')
+                    label.label(for='login_politics') Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с
+                      a(href='#') Условиями
+            .form_row
+              .grid-col-12
+                .form_group
+                  input.btn.btn_gold_bordered.w_100(type='submit', value="Получить SMS-код")
+
+.modal(id='modal_testimonials')
+  .grid-container
+    .grid-row
+      .grid-col-md-6.offset-md-3.grid-col-sm-6.offset-sm-3.grid-col-12.modal_col
+        .modal_inner
+          .modal_title
+            h2 Оставить отзыв
+            p.modal_subtitle Рейтинг
+            .rating
+              .rating_stars
+                .rating_star.filled
+                  svg(width='21', height='19', viewBox='0 0 21 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z', stroke='#D6B68A', stroke-width='1.5')
+                .rating_star.filled
+                  svg(width='21', height='19', viewBox='0 0 21 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z', stroke='#D6B68A', stroke-width='1.5')
+                .rating_star.filled
+                  svg(width='21', height='19', viewBox='0 0 21 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z', stroke='#D6B68A', stroke-width='1.5')
+                .rating_star.filled
+                  svg(width='21', height='19', viewBox='0 0 21 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z', stroke='#D6B68A', stroke-width='1.5')
+                .rating_star
+                  svg(width='21', height='19', viewBox='0 0 21 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z', stroke='#D6B68A', stroke-width='1.5')
+
+          form.form(id='testimonials')
+            .form_row
+              .grid-col-md-6.grid-col-12
+                .form_group
+                  input.input(type='text', id='testimonial_name')
+                  label.label.label_placeholder(for='testimonial_name') Ваше имя
+              .grid-col-md-6.grid-col-12
+                .form_group
+                  input.input(type='tel', id='testimonial_tel', placeholder='Ваш телефон')
+            .form_row
+              .grid-col-12
+                .form_group
+                  textarea.textarea(id='testimonial_textarea')
+                  label.label.label_placeholder(for='testimonial_textarea') Текст отзыва
+            .form_row
+              .grid-col-12
+                .form_group
+                  .politics
+                    input.input.checkbox(type='checkbox', name='testimonial_politics', id='testimonial_politics')
+                    label.label(for='testimonial_politics') Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с
+                      a(href='#') Условиями
+            .form_row
+              .grid-col-12
+                .form_group
+                  input.btn.btn_gold_bordered.w_100(type='submit', value="Отправить отзыв")
+
+.modal(id='modal_read_later')
+  .grid-container
+    .grid-row
+      .grid-col-md-6.offset-md-3.grid-col-sm-6.offset-sm-3.grid-col-12.modal_col
+        .modal_inner
+          .modal_title
+            h2 Читать позже
+            p.modal_subtitle мы отправим вам ссылку на статью на вашу почту
+          form.form(id='read_later')
+            .form_row
+              .grid-col-12
+                .form_group
+                  input.input.text-center(type='email', id='read_later_email', placeholder='Ваш e-mail')
+            .form_row
+              .grid-col-12
+                .form_group
+                  .politics
+                    input.input.checkbox(type='checkbox', name='read_later_politics', id='read_later_politics')
+                    label.label(for='read_later_politics') Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с
+                      a(href='#') Условиями
+            .form_row
+              .grid-col-12
+                .form_group
+                  input.btn.btn_gold_bordered.w_100(type='submit', value="Отправить")
+
 script(src='js/jquery-3.2.1.min.js')
 script(src='js/slick.min.js')
+script(src='js/jquery.fancybox.min.js')
+script(src='js/jquery.inputmask.min.js')
+script(src='js/inputmask.min.js')
 script(src='js/main.js')
 script(src='js/sliders.js')

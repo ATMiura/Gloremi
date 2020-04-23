@@ -5,5 +5,20 @@ block content
   include includes/post/title
 
   include includes/post/post
-  include includes/index/block_blog
+  include includes/post/related_products
+  .post_tags.mb-100
+    .grid-container
+      .grid-row
+        .grid-col-12.text-center
+          a.text.sand.post_tag(href='#') #Здоровье
+          a.text.sand.post_tag(href='#') #Массажер
+          a.text.sand.post_tag(href='#') #Шея
+          a.text.sand.post_tag(href='#') #Плечи
+          a.text.sand.post_tag(href='#') #Шиацу
+          a.back.gr(href='#')
+            svg(width='101', height='28', viewBox='0 0 101 28', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M100.408 14.014L1.4082 14.014M16.0798 26.891L0.999236 13.7541M16.0798 1.00001L0.999236 14.1369', stroke='#2E6D5C', stroke-width='1.5')
+            | Назад к списку
+
+  include includes/post/block_blog
   include includes/index/inst

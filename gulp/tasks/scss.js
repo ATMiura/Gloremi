@@ -7,7 +7,7 @@ const shorthand = require('gulp-shorthand')
 const autoprefixer = require('gulp-autoprefixer')
 const gulpStylelint = require('gulp-stylelint')
 
-module.exports = function styles() {
+module.exports = function scss() {
   return gulp.src('src/styles/*.scss')
     .pipe(plumber())
     .pipe(gulpStylelint({

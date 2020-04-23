@@ -12,7 +12,7 @@
     justify-content: space-between; }
     .blog_item .blog_item_inner .blog_item_img {
       position: relative;
-      margin-bottom: 50px; }
+      margin-bottom: 25px; }
       .blog_item .blog_item_inner .blog_item_img:after {
         content: "";
         display: block;
@@ -29,6 +29,7 @@
     .blog_item .blog_item_inner .blog_item_content {
       text-align: center; }
       .blog_item .blog_item_inner .blog_item_content .blog_item_date {
+        font-family: 'Prata', serif;
         font-size: 0.75rem;
         line-height: 1rem;
         color: var(--color-sand);

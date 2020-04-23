@@ -215,3 +215,54 @@ $(window).on('load resize', function () {
     $('.product_card .product_img').equalHeights();
     $('.product_card .product_name').equalHeights();
 });
+
+/* fancy modals */
+/* форма входа */
+$(".login").on('click', function() {
+  $.fancybox.open( $('#modal_read_later'), {
+    //src  : '#login',
+    type : 'inline',
+    touch: false,
+    autoFocus: false,
+    fullScreen: true,
+    baseClass: "modal_custom",
+    infobar: false,
+    buttons: false,
+  });
+});
+
+/* форма отзыва */
+$(".add_testimonial").on('click', function() {
+  $.fancybox.open( $('#modal_testimonials'), {
+    //src  : '#login',
+    type : 'inline',
+    touch: false,
+    autoFocus: false,
+    fullScreen: true,
+    baseClass: "modal_custom",
+    infobar: false,
+    buttons: false,
+  });
+});
+
+/* form mask */
+$('.input[type="tel"]').inputmask({
+  showMaskOnHover: false,
+  mask: '+7(999)-999-99-99',
+  //placeholder: "Телефон",
+});
+
+//$('.input[type="email"]').inputmask({
+//  showMaskOnHover: true,
+//  mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+//  onBeforePaste: function (pastedValue, opts) {
+//    pastedValue = pastedValue.toLowerCase();
+//    return pastedValue.replace("mailto:", "");
+//  },
+//  definitions: {
+//    '*': {
+//      validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+//      casing: "lower"
+//    }
+//  }
+//});
