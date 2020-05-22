@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
 
     /* слайдер на главной */
@@ -17,7 +19,7 @@ $(document).ready(function () {
         $('.main_slider_nav').siblings('.slider_counter').find('.total').text(slick.slideCount);
     });
     $('.main_slider_nav').slick({
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -42,42 +44,56 @@ $(document).ready(function () {
     });
 
     /* слайдер в табах */
+    $tab_slidesToShow = 4;
+
+    $(window).on('resize', function () {
+      if ($(window).width() < 992){
+        $tab_slidesToShow = 3;
+      } else if ($(window).width() < 768){
+        $tab_slidesToShow = 2;
+      }
+    });
+
     setTimeout(function () {
 
         $('[id*="tab-"] .product_container').each(function () {
 
+            //$(this).find('.slick-slide:not(.slick-active)').each(function(){
+            //  console.log($(this).length)
+            //})
+
             $(this).on('init afterChange', function (event, slick, currentSlide) {
-                $(this).parents('.tab_pane').find('.total').text(slick.slideCount);
+                $(this).parents('.tab_pane').find('.total').text(Math.ceil(slick.slideCount/$tab_slidesToShow));
             });
 
             $(this).slick({
                 dots: false,
                 infinite: false,
                 speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToShow: $tab_slidesToShow,
+                slidesToScroll: 4,
                 fade: false,
                 arrows: true,
                 responsive: [
                     {
                         breakpoint: 992,
                         settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
+                            slidesToShow: $tab_slidesToShow,
+                            slidesToScroll: 3,
                         }
                     },
                     {
                         breakpoint: 768,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
+                            slidesToShow: $tab_slidesToShow,
+                            slidesToScroll: 2
                         }
                     },
                     {
                         breakpoint: 575,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
+                            slidesToShow: $tab_slidesToShow,
+                            slidesToScroll: 2
                         }
                     }
                 ],
@@ -91,8 +107,15 @@ $(document).ready(function () {
             });
 
             $(this).on('init afterChange', function (event, slick, currentSlide) {
-                $(this).parents('.tab_pane').find('.current').text(currentSlide < 9 ? `O${currentSlide + 1}` : currentSlide + 1);
-                $(this).parents('.tab_pane').find('.total').text(slick.slideCount);
+                //current_slide = currentSlide < 9 ? `O${currentSlide + 1}` : currentSlide + 1;
+                //console.log(currentSlide/$tab_slidesToShow);
+                if(currentSlide < 9 ){
+                  current_slide_zero = '0';
+                } else {
+                  current_slide_zero = '';
+                }
+                $(this).parents('.tab_pane').find('.current').text(current_slide_zero+Math.ceil((currentSlide + 1)/$tab_slidesToShow));
+                $(this).parents('.tab_pane').find('.total').text(Math.ceil(slick.slideCount/$tab_slidesToShow));
             });
         });
     },50);
@@ -112,7 +135,7 @@ $(document).ready(function () {
     /* слайдер в деталке товара */
     $('.product_slider_for').slick({
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -129,7 +152,7 @@ $(document).ready(function () {
 
     $('.product_slider_nav').slick({
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
