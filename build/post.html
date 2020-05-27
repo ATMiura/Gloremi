@@ -35,10 +35,10 @@
             </div>
             <div class="grid-col-md-5 grid-col-12 header_icons">
               <div class="header_search icon_item">
-                <form class="search_form">
+                <form class="search_form" autocomplete="off">
                   <div class="form_group">
                     <label class="label" for="search_form_input">
-                      <input class="search_form_input input" id="search_form_input" type="text" placeholder="Что вы ищете?">
+                      <input class="search_form_input input" id="search_form_input" type="text" placeholder="Что вы ищете?" autocomplete="disabled">
                     </label>
                   </div>
                   <button class="icon_loupe">
@@ -80,7 +80,7 @@
                   </div>
                 </form>
               </div>
-              <div class="icon_man icon_item login"><a>
+              <div class="icon_man icon_item login" data-modal="login"><a>
                   <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.9856 15.2352C16.9391 15.2352 20.1467 12.0276 20.1467 8.07406C20.1467 4.12019 16.9388 0.95 12.9856 0.95C9.03208 0.95 5.82451 4.15757 5.82451 8.1111C5.82451 12.065 9.03242 15.2352 12.9856 15.2352ZM12.9856 2.42037C16.1061 2.42037 18.6393 4.95353 18.6393 8.07406C18.6393 11.1946 16.1061 13.7278 12.9856 13.7278C9.86508 13.7278 7.33192 11.1946 7.33192 8.07406C7.33192 4.95353 9.86508 2.42037 12.9856 2.42037Z" fill="#3B5951" stroke="#26694C" stroke-width="0.1"></path>
                     <path d="M2.29488 28.9998C2.29488 26.4566 3.21625 24.0235 4.83862 22.0691C6.42375 20.2261 8.56159 18.9728 10.9576 18.4934C11.6221 18.3827 12.3227 18.309 12.9856 18.309C18.8839 18.309 23.6763 23.1015 23.6763 28.9998V29.0498H23.7263H25.1337H25.1837V28.9998C25.1837 22.3054 19.7168 16.8387 12.9856 16.8387C12.2048 16.8387 11.4238 16.913 10.6797 17.0618C7.96472 17.5826 5.51037 19.033 3.72543 21.1154L3.72525 21.1156C1.86585 23.3097 0.824512 26.0989 0.824512 28.9998V29.0498H0.874512H2.24488H2.29488V28.9998Z" fill="#3B5951" stroke="#26694C" stroke-width="0.1"></path>
@@ -100,36 +100,35 @@
           <div class="grid-row">
             <div class="grid-col-xl-8 offset-xl-2 grid-col-12 menu">
               <nav class="menu_navbar">
-                <div class="toggle_button" data-menu-toggle="">
-                  <div class="toggle_icon">
-                    <div class="toggle_icon_line"></div>
-                    <div class="toggle_icon_line"></div>
-                    <div class="toggle_icon_line"></div>
-                  </div>
-                  <!--.toggle_text Каталог товаров-->
-                  <div class="cat_menu">
-                    <div class="mobile_close"><img src="img/mobile_close.svg" alt=""></div>
-                    <div class="grid-container">
-                      <div class="grid-row">
-                        <div class="grid-col-md-3 col-sm-6 col-12 cat_menu_item"><a href="">
-                            <div class="cat_menu_img"><img src="img/cat_menu_img_1.png" alt=""></div>
-                            <div class="cat_menu_name">массажное оборудование</div></a></div>
-                        <div class="grid-col-md-3 col-sm-6 col-12 cat_menu_item"><a href="">
-                            <div class="cat_menu_img"><img src="img/cat_menu_img_2.png" alt=""></div>
-                            <div class="cat_menu_name">уход за телом</div></a></div>
-                        <div class="grid-col-md-3 col-sm-6 col-12 cat_menu_item"><a href="">
-                            <div class="cat_menu_img"><img src="img/cat_menu_img_3.png" alt=""></div>
-                            <div class="cat_menu_name">уход за лицом</div></a></div>
-                        <div class="grid-col-md-3 col-sm-6 col-12 cat_menu_item"><a href="">
-                            <div class="cat_menu_img"><img src="img/cat_menu_img_4.png" alt=""></div>
-                            <div class="cat_menu_name">косметика</div></a></div>
-                        <div class="grid-col-12 cat_menu_item_mobile"></div>
+                <div class="mobile_close"><img src="img/mobile_close.svg" alt=""></div>
+                <ul class="menu_list">
+                  <li class="menu_item">
+                    <div class="toggle_button">
+                      <div class="toggle_icon">
+                        <div class="toggle_icon_line"></div>
+                        <div class="toggle_icon_line"></div>
+                        <div class="toggle_icon_line"></div>
+                      </div>
+                    </div><a class="menu_item_link" href="#">Каталог товаров</a>
+                    <div class="submenu">
+                      <div class="grid-container">
+                        <div class="grid-row">
+                          <div class="grid-col-md-3 col-sm-6 col-12 submenu_item"><a href="">
+                              <div class="submenu_img"><img src="img/cat_menu_img_1.png" alt=""></div>
+                              <div class="submenu_name">массажное оборудование</div></a></div>
+                          <div class="grid-col-md-3 col-sm-6 col-12 submenu_item"><a href="">
+                              <div class="submenu_img"><img src="img/cat_menu_img_2.png" alt=""></div>
+                              <div class="submenu_name">уход за телом</div></a></div>
+                          <div class="grid-col-md-3 col-sm-6 col-12 submenu_item"><a href="">
+                              <div class="submenu_img"><img src="img/cat_menu_img_3.png" alt=""></div>
+                              <div class="submenu_name">уход за лицом</div></a></div>
+                          <div class="grid-col-md-3 col-sm-6 col-12 submenu_item"><a href="">
+                              <div class="submenu_img"><img src="img/cat_menu_img_4.png" alt=""></div>
+                              <div class="submenu_name">косметика</div></a></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <ul class="menu_list">
-                  <li class="menu_item"><a class="menu_item_link" href="#">Каталог товаров</a></li>
+                  </li>
                   <li class="menu_item"><a class="menu_item_link" href="#">Акции</a></li>
                   <li class="menu_item"><a class="menu_item_link" href="#">Блог</a></li>
                   <li class="menu_item"><a class="menu_item_link" href="#">Оплата и доставка</a></li>
@@ -178,7 +177,7 @@
                   </div>
                   <div class="post_info_col right">
                     <div class="post_views"><img src="img/post_views.svg">28 564</div>
-                    <div class="read_later"><a class="btn btn_gold_bordered">Читать позже</a></div>
+                    <div class="read_later"><a class="btn btn_gold_bordered read_later" data-modal="read_later">Читать позже</a></div>
                   </div>
                 </div>
                 <div class="text_content"><img src="img/post_img.jpg">
@@ -204,6 +203,19 @@
                     <li>Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание новых предложений.</li>
                     <li>В формировании направлений прогрессивного развития. Не следует, однако забывать, что консультация с широким активом в значительной степени обуславливает создание новых предложений. Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития.</li>
                   </ul>
+                  <p>&nbsp;</p>
+                </div>
+                <div class="video">
+                  <div class="video_preview" style="background-image: url('img/video_preview.jpg')"></div>
+                  <video id="myVideo" controls="">
+                    <source src="https://futuratm.ru/upload/iblock/337/3376e69fe0245088440692e7699b7557.mp4">
+                  </video>
+                  <button class="button_video">
+                    <svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="65.447" cy="65.5" rx="65.447" ry="65.5" fill="#2E6D5C"></ellipse>
+                      <path d="M45.4634 94.1574L45.4634 35.8426L98.8754 65.0006L45.4634 94.1574Z" stroke="white"></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -594,169 +606,338 @@
       <div class="footer_lvl_3">
         <div class="grid-container">
           <div class="grid-row">
-            <div class="grid-col-12 text-center"><a href=""><img src="img/iarga.svg" alt=""></a></div>
+            <div class="grid-col-12 text-center"><a class="comp_name" href="">Сделано в<img src="img/stratosphere.svg" alt=""></a></div>
           </div>
         </div>
       </div>
     </footer>
-    <div class="modal" id="modal_login">
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-col-md-6 offset-md-3 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
-            <div class="modal_inner">
-              <div class="modal_title">
-                <h2>Войти в кабинет</h2>
-                <p class="modal_subtitle">по номеру вашего телефона:</p>
-              </div>
-              <form class="form" id="login">
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <input class="input text-center" type="tel" id="login_tel" placeholder="Телефон">
-                    </div>
-                  </div>
+    <div class="modals">
+      <div class="modal" id="modal_login">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Войти в кабинет</p>
+                  <p class="modal_subtitle">по номеру вашего телефона:</p>
                 </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <div class="politics">
-                        <input class="input checkbox" type="checkbox" name="login_politics" id="login_politics">
-                        <label class="label" for="login_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                <form class="form" id="login">
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="input text-center" type="tel" id="login_tel" placeholder="Телефон">
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <input class="btn btn_gold_bordered w_100" type="submit" value="Получить SMS-код">
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <div class="politics">
+                          <input class="input checkbox" type="checkbox" name="login_politics" id="login_politics">
+                          <label class="label" for="login_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="btn btn_gold_bordered w_100" type="submit" value="Получить SMS-код">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="modal" id="modal_testimonials">
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-col-md-6 offset-md-3 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
-            <div class="modal_inner">
-              <div class="modal_title">
-                <h2>Оставить отзыв</h2>
-                <p class="modal_subtitle">Рейтинг</p>
-                <div class="rating">
-                  <div class="rating_stars">
-                    <div class="rating_star filled">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
-                      </svg>
-                    </div>
-                    <div class="rating_star filled">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
-                      </svg>
-                    </div>
-                    <div class="rating_star filled">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
-                      </svg>
-                    </div>
-                    <div class="rating_star filled">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
-                      </svg>
-                    </div>
-                    <div class="rating_star">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
-                      </svg>
-                    </div>
-                  </div>
+      <div class="modal" id="modal_login_step_2">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Ввести код из sms</p>
+                  <p class="modal_subtitle"><span>мы отправили вам код на номер</span><span class="sms_number">+7 (962) 368-47-12</span><a class="sand" href="#">изменить номер</a></p>
                 </div>
-              </div>
-              <form class="form" id="testimonials">
-                <div class="form_row">
-                  <div class="grid-col-md-6 grid-col-12">
-                    <div class="form_group">
-                      <input class="input" type="text" id="testimonial_name">
-                      <label class="label label_placeholder" for="testimonial_name">Ваше имя</label>
-                    </div>
-                  </div>
-                  <div class="grid-col-md-6 grid-col-12">
-                    <div class="form_group">
-                      <input class="input" type="tel" id="testimonial_tel" placeholder="Ваш телефон">
-                    </div>
-                  </div>
-                </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <textarea class="textarea" id="testimonial_textarea"></textarea>
-                      <label class="label label_placeholder" for="testimonial_textarea">Текст отзыва</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <div class="politics">
-                        <input class="input checkbox" type="checkbox" name="testimonial_politics" id="testimonial_politics">
-                        <label class="label" for="testimonial_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                <form class="form" id="login_step_2">
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="input text-center" type="text" id="sms_code" placeholder="Введите код из sms">
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <input class="btn btn_gold_bordered w_100" type="submit" value="Отправить отзыв">
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group justify-content-center">
+                        <div class="sms_repeat text-center"><span>Запросить код повторно вы можете через</span><span class="sand">00:60</span><span class="sand">сек</span></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="btn btn_gold_bordered w_100" type="submit" value="Отправить">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group justify-content-center"><a class="text t_transform_up sand" href="#">проблемы со входом?</a></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="modal" id="modal_read_later">
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-col-md-6 offset-md-3 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
-            <div class="modal_inner">
-              <div class="modal_title">
-                <h2>Читать позже</h2>
-                <p class="modal_subtitle">мы отправим вам ссылку на статью на вашу почту</p>
-              </div>
-              <form class="form" id="read_later">
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <input class="input text-center" type="email" id="read_later_email" placeholder="Ваш e-mail">
-                    </div>
-                  </div>
-                </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <div class="politics">
-                        <input class="input checkbox" type="checkbox" name="read_later_politics" id="read_later_politics">
-                        <label class="label" for="read_later_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+      <div class="modal" id="modal_add_testimonial">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Оставить отзыв</p>
+                  <p class="modal_subtitle sand">Рейтинг:</p>
+                  <div class="rating">
+                    <div class="rating_stars">
+                      <div class="rating_star" data-rat="1">
+                        <svg width="26" height="25" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
+                        </svg>
+                      </div>
+                      <div class="rating_star" data-rat="2">
+                        <svg width="26" height="25" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
+                        </svg>
+                      </div>
+                      <div class="rating_star" data-rat="3">
+                        <svg width="26" height="25" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
+                        </svg>
+                      </div>
+                      <div class="rating_star" data-rat="4">
+                        <svg width="26" height="25" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
+                        </svg>
+                      </div>
+                      <div class="rating_star" data-rat="5">
+                        <svg width="26" height="25" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.97878 1.77066L12.3032 6.69293L12.479 7.06528L12.8876 7.11678L18.3312 7.80295L14.3552 11.5505L14.0567 11.8318L14.1325 12.2349L15.1363 17.5735L10.3347 14.9211L9.97031 14.7199L9.60675 14.9226L4.86834 17.5652L5.87062 12.2349L5.94641 11.8318L5.64795 11.5505L1.67191 7.80295L7.11553 7.11678L7.52778 7.06482L7.70234 6.68776L9.97878 1.77066Z" stroke="#D6B68A" stroke-width="1.5"></path>
+                        </svg>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="form_row">
-                  <div class="grid-col-12">
-                    <div class="form_group">
-                      <input class="btn btn_gold_bordered w_100" type="submit" value="Отправить">
+                <form class="form" id="testimonials">
+                  <div class="form_row">
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" type="text" id="testimonial_name">
+                        <label class="label label_placeholder" for="testimonial_name">Ваше имя</label>
+                      </div>
+                    </div>
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" type="tel" id="testimonial_tel" placeholder="Ваш телефон">
+                      </div>
                     </div>
                   </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <textarea class="textarea" id="testimonial_textarea"></textarea>
+                        <label class="label label_placeholder" for="testimonial_textarea">Текст отзыва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <div class="politics">
+                          <input class="input checkbox" type="checkbox" name="testimonial_politics" id="testimonial_politics">
+                          <label class="label" for="testimonial_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="btn btn_gold_bordered w_100" type="submit" value="Отправить отзыв">
+                      </div>
+                    </div>
+                  </div>
+                  <input id="good_id" type="hidden" name="good_id">
+                  <input id="rating_value" type="hidden" name="rating_value" value="1">
+                </form>
+              </div>
+              <div class="modal_message">
+                <div class="modal_title">
+                  <p class="h3">Спасибо за ваш отзыв!</p>
                 </div>
-              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal_ask_a_question">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Задайте вопрос</p>
+                </div>
+                <form class="form" id="ask_a_question">
+                  <div class="form_row">
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" type="text" id="ask_a_question_name">
+                        <label class="label label_placeholder" for="ask_a_question_name">Ваше имя</label>
+                      </div>
+                    </div>
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" type="tel" id="ask_a_question_tel" placeholder="Ваш телефон">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <textarea class="textarea" id="ask_a_question_textarea"></textarea>
+                        <label class="label label_placeholder" for="ask_a_question_textarea">Текст вопроса</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <div class="politics">
+                          <input class="input checkbox" type="checkbox" name="ask_a_question_politics" id="ask_a_question_politics">
+                          <label class="label" for="ask_a_question_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="btn btn_gold_bordered w_100" type="submit" value="Задать вопрос">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal_message">
+                <div class="modal_title">
+                  <p class="h3">Ваш вопрос отправлен</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal_read_later">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Читать позже</p>
+                  <p class="modal_subtitle">мы отправим вам ссылку на статью на вашу почту</p>
+                </div>
+                <form class="form" id="read_later">
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="input text-center" type="email" id="read_later_email" placeholder="Ваш e-mail">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <div class="politics">
+                          <input class="input checkbox" type="checkbox" name="read_later_politics" id="read_later_politics">
+                          <label class="label" for="read_later_politics">Нажимая кнопку “Отправить” я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group">
+                        <input class="btn btn_gold_bordered w_100" type="submit" value="Отправить">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal_message">
+                <div class="modal_title">
+                  <p class="h3">Ссылка отправлена на вашу почту</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal_one_click_buy">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-col-md-8 offset-md-2 grid-col-sm-6 offset-sm-3 grid-col-12 modal_col">
+              <div class="modal_inner">
+                <div class="modal_title">
+                  <p class="h2">Данные покупателя</p>
+                </div>
+                <form class="form" id="one_click_buy">
+                  <div class="form_row">
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" id="customer_name" type="text">
+                        <label class="label label_placeholder" for="customer_name">Ваше имя</label>
+                      </div>
+                    </div>
+                    <div class="grid-col-md-6 grid-col-12">
+                      <div class="form_group">
+                        <input class="input" type="tel" id="customer_tel" placeholder="Ваш телефон">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group flex-column align-items-start">
+                        <div class="politics">
+                          <input class="input checkbox value_exists" id="customer_politics" type="checkbox" name="customer_politics">
+                          <label class="label" for="customer_politics">Я соглашаюсь на обработку моих персональных данных в соответствии с<a href="#">Условиями</a></label>
+                        </div>
+                        <div class="politics">
+                          <input class="input checkbox value_exists" id="customer_promo" type="checkbox" name="customer_promo" checked="">
+                          <label class="label" for="customer_promo">Хочу получать рекламные рассылки и выгодные предложения</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_row">
+                    <div class="grid-col-12">
+                      <div class="form_group d-flex justify-content-center">
+                        <input class="btn btn_gold_bordered" type="submit" value="Сохранить">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal_message">
+                <div class="modal_title">
+                  <p class="h3">Ваш заказ оформлен</p>
+                  <p class="modal_subtitle">Ваш заказ № оформлен, ожидайте звонка оператора</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

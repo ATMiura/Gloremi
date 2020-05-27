@@ -132,6 +132,11 @@ $(document).ready(function () {
         $('[id*="tab-"] .product_card .product_name').equalHeights();
     });
 
+    $(window).on('resize', function () {
+      $('[id*="tab-"] .product_card .product_img').equalHeights();
+      $('[id*="tab-"] .product_card .product_name').equalHeights();
+    });
+
     /* слайдер в деталке товара */
     $('.product_slider_for').slick({
       dots: false,
