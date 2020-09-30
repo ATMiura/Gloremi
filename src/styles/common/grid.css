@@ -24,6 +24,33 @@ header,main,footer{
   display: flex !important;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+.flex-column{
+  flex-direction: column;
+}
+
+.align-items-start{
+  align-items: flex-start;
+}
+.align-items-end{
+  align-items: flex-end;
+}
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-start{
+  justify-content: flex-start;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.justify-content-center{
+  justify-content: center;
+}
+
 .grid-container {
     width: 100%;
     padding-right: 15px;
@@ -1478,3 +1505,5 @@ header,main,footer{
         margin: 0 -17px;
     }
 }
+
+

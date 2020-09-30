@@ -49,7 +49,67 @@
 
       }
       .banner_sale_timer{
+        flex: 0 0 190px;
+      }
+      .timer{
+        &_days{
 
+        }
+        &_hours{
+
+        }
+        &_minutes{
+
+        }
+        &_seconds{
+
+        }
+        &_item{
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          font-family: Prata, serif;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        &_circle{
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg{
+            circle{
+              fill: none;
+              stroke: var(--color-sand);
+              stroke-width: 1;
+              transform: rotate(15deg);
+              transform-origin: center!important;
+              stroke-dasharray: 226;
+              stroke-dashoffset: 40;
+            }
+          }
+        }
+        &_inner{
+          /*margin-left: -55px;
+          display: flex;*/
+        }
+        &_number{
+          position: absolute;
+          font-size: 1.875rem;
+          line-height: 2.5rem;
+          text-transform: uppercase;
+          color: var(--color-light-gr);
+          padding-top: 7px;
+        }
+        &_text{
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          text-transform: uppercase;
+          color: var(--color-sand);
+          margin-bottom: 15px;
+          margin-left: -15px;
+        }
       }
       .banner_main_img{
         img{
@@ -153,6 +213,10 @@
         .product_banners {
           left: -100px;
         }
+        .banner_sale_descr{
+          margin-top: -10px;
+          margin-bottom: 0;
+        }
       }
       &.banner_full{
         .banner_descr{
@@ -181,6 +245,12 @@
     .banner_item{
       .banner_inner{
         align-items: center;
+        .banner_sale_timer{
+          flex: 0 0 150px;
+        }
+        .banner_sale_descr{
+          margin-top: 10px;
+        }
       }
       .banner_descr{
         .more{
@@ -191,6 +261,9 @@
         .banner_inner{
           padding: 10px;
           padding-left: 80px;
+        }
+        .banner_descr{
+          flex: 0 0 30%;
         }
       }
       &.banner_half{
@@ -228,6 +301,22 @@
           top: 20px;
           left: -90px;
         }
+        .banner_sale_timer{
+          display: flex;
+          flex-basis: 100%;
+          padding-right: 20px;
+          justify-content: space-between;
+          align-items: center;
+
+          order: 4;
+        }
+        .timer_item{
+          margin-bottom: 0;
+        }
+        .banner_sale_descr{
+          order: 5;
+          font-size: .75rem;
+        }
       }
       &.banner_full{
         .banner_descr {
@@ -262,12 +351,12 @@
     .banner_item{
       .banner_inner{
         padding: 40px 0 !important;
-        padding-left: 50px !important;
-        flex-wrap: nowrap;
+        padding-left: 40px !important;
+        //flex-wrap: nowrap;
 
         .product_banners{
           top: 10px !important;
-          left: -53px !important;
+          left: -65px !important;
         }
         .banner_descr {
           flex: 0 0 20%;
@@ -276,6 +365,18 @@
             max-width: 80px;
             height: auto;
           }
+        }
+        .timer_circle{
+          width: 37px;
+          height: 37px;
+        }
+        .timer_number{
+          font-size: .875rem;
+        }
+        .timer_text{
+          font-size: .875rem;
+          margin-bottom: 25px;
+          text-transform: none;
         }
       }
       &.banner_half{

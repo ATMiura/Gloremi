@@ -15,13 +15,13 @@
   flex: 0 0 25%;
 }
 .product_card {
-  max-width: 25%;
-  flex: 0 0 25%;
+  /*max-width: 25%;
+  flex: 0 0 25%;*/
+  text-align: center;
+  position: relative;
+  padding: 25px 10px;
 }
   .product_card_inner{
-    text-align: center;
-    position: relative;
-    padding: 25px 10px;
     display: inline-block;
     text-decoration: none;
     color: inherit;
@@ -31,6 +31,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      min-height: 200px;
       img{
         max-width: 100%;
         height: auto;
@@ -69,25 +70,25 @@
       }
     }
     .product_cart{
-      a{
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        border-radius: 100%;
-        outline: none;
-        &:hover,
-        &.in_cart{
-          background: var(--color-light-sand);
-          cursor: pointer;
-        }
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      border-radius: 100%;
+      outline: none;
+      &:hover,
+      &.in_cart{
+        background: var(--color-light-sand);
+        cursor: pointer;
       }
       img{
         outline: none;
       }
     }
+
+
 
 .product_banners {
   position: absolute;
@@ -152,7 +153,8 @@
     stroke-dasharray: 235;
     stroke-dashoffset: 135;
   }
-  .product_banner_sale {
+  .product_banner_sale,
+  .product_banner_red{
     color: var(--color-pers);
     &:before {
       border-color: var(--color-pers);
@@ -161,7 +163,8 @@
       stroke: var(--color-pers);
     }
   }
-  .product_banner_new {
+  .product_banner_new,
+  .product_banner_gr{
     color: var(--color-gr);
     &:before {
       border-color: var(--color-gr);
@@ -171,6 +174,7 @@
     }
   }
   .product_banner_hit,
+  .product_banner_gold,
   .product_banner_cat_title{
     color: var(--color-sand);
     &:before {
@@ -197,43 +201,7 @@
   }
 }
 
-@media(max-width: 575px){
-  .product_card_inner{
-    padding: 10px;
-    .product_img{
-      margin-bottom: 15px;
-    }
-    .product_name{
-      font-size: 0.625rem;
-      line-height: 1rem;
-    }
-    .product_price{
-      .product_price_item{
-        font-size: 0.875rem;
-        line-height: 1.188rem;
-        margin: 0 3px;
-      }
-    }
-  }
-  .product_banners{
-    left: -50px;
-    .product_banner svg {
-      margin-right: -12px;
-      width: 24px;
-      height: 24px;
-      circle{
-        transform: rotate(57deg) !important;
-        stroke-dasharray: 138.230076758 !important;
-        stroke-dashoffset: 43 !important;
-      }
-    }
-    .product_banner_text{
-      font-size: .5rem;
-      line-height: 0.563rem;
-      padding-top: 2px;
-    }
-  }
-}
+
 
 
 /* деталка */
@@ -384,6 +352,9 @@
   }
   .feedback{
     margin-top: 50px !important;
+    .btn{
+      margin: 0 auto;
+    }
   }
   .feedback_item{
     display: flex;
@@ -479,11 +450,16 @@
     justify-content: center;
     .rating_star{
       margin: 0 2.5px;
-      &.filled svg{
+      &.filled svg,
+      &.selected svg{
         fill: #D6B68A;
       }
     }
   }
+}
+
+.related_products .product_card{
+  max-width: 25%;
 }
 
 @media(max-width: 1299px){
@@ -595,6 +571,10 @@
       margin-top: 30px !important;
     }
   }
+
+  .related_products .product_card{
+    max-width: 33.3%;
+  }
 }
 
 @media(max-width: 767px){
@@ -636,6 +616,9 @@
       }
     }
   }
+  .related_products .product_card{
+    max-width: 50%;
+  }
 }
 
 @media(max-width: 575px){
@@ -658,6 +641,43 @@
           justify-content: center;
         }
       }
+    }
+  }
+
+  .product_card_inner{
+    /*padding: 10px;*/
+    .product_img{
+      margin-bottom: 15px;
+      min-height: initial;
+    }
+    .product_name{
+      font-size: 0.625rem;
+      line-height: 1rem;
+    }
+    .product_price{
+      .product_price_item{
+        font-size: 0.875rem;
+        line-height: 1.188rem;
+        margin: 0 3px;
+      }
+    }
+  }
+  .product_banners{
+    left: -50px;
+    .product_banner svg {
+      margin-right: -12px;
+      width: 24px;
+      height: 24px;
+      circle{
+        transform: rotate(57deg) !important;
+        stroke-dasharray: 138.230076758 !important;
+        stroke-dashoffset: 43 !important;
+      }
+    }
+    .product_banner_text{
+      font-size: .5rem;
+      line-height: 0.563rem;
+      padding-top: 2px;
     }
   }
 }

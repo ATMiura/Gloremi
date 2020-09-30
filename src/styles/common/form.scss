@@ -10,6 +10,10 @@
     font-weight: 500;
     font-size: 0.688rem;
     line-height: 1rem;
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
     a{
       margin-left: 5px;
       color: var(--color-gold);
@@ -38,6 +42,7 @@
   margin-bottom: 50px;
   display: flex;
   align-items: center;
+  width: 100%;
   .tooltip{
     position: absolute;
     right: 0;
@@ -50,15 +55,23 @@
   border-radius: 0;
   box-shadow: none;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--color-dark-sand);
+  padding: 0 !important;
+  padding-top: 15px !important;
+  padding-bottom: 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--color-dark-sand) !important;
   outline: none !important;
-  font-size: .875rem !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .875rem;
   font-weight: 600;
-  line-height: 1.5rem !important;
+  line-height: 1.5rem;
+  background: none !important;
+
+  border-radius: 0 !important;
+  box-shadow: none !important;
   &::placeholder{
     color: var(--color-text);
+    font-weight: normal;
   }
 }
 .input{
@@ -80,21 +93,22 @@
   &.radio ~ label:after{
     content: "";
     position: absolute;
-    top: 5px;
+    /*top: 5px;*/
+    top: 0;
     left: 0;
     display: inline-block;
     font-size: 0;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     border: 1px solid var(--color-text);
     background: #fff;
   }
   &.checkbox:checked ~ label:after{
-    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.46154 5.5L1.15385 3.25L0 4.375L2.30769 6.625L3.46154 7.75L4.61538 6.625L10 1.375L8.84615 0.25L3.46154 5.5Z' fill='%232E6D5C'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.46154 5.5L1.15385 3.25L0 4.375L2.30769 6.625L3.46154 7.75L4.61538 6.625L10 1.375L8.84615 0.25L3.46154 5.5Z' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color-green);
-    border-color: var(--color-green);
+    background-color: var(--color-gr);
+    border-color: var(--color-gr);
   }
   &.radio:checked ~ label:after{
 
@@ -136,6 +150,9 @@
   max-width: 350px;
   width: 100%;
   position: relative;
+  .search_form{
+    margin-bottom: 0;
+  }
 }
 .search_form{
   display: flex;
@@ -206,6 +223,7 @@
           margin-right: 20px;
           min-width: 80px;
           max-width: 80px;
+          min-height: initial;
         }
         .product_name{
           max-width: 250px;
@@ -282,6 +300,9 @@
     padding: 50px;
   }
 }
+.modals{
+  display: none;
+}
 .modal{
   color: #fff;
   width: 100%;
@@ -297,14 +318,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    &.submitted{
+      .modal_inner{
+        display: none;
+      }
+      .modal_message{
+        display: block;
+      }
+    }
   }
   &_inner{
-    max-width: 480px;
-    margin: 0 auto;
+    .form{
+      max-width: 480px;
+      margin: 0 auto;
+    }
   }
   &_title{
     margin-bottom: 35px;
-    h2{
+    h2, h3, .h2, .h3{
       //font-size: 2.4rem;
       color: #fff;
       margin-bottom: 10px;
@@ -315,9 +346,29 @@
     font-family: 'Prata', serif;
     font-size: .875rem;
     line-height: 1.188rem;
-    color: var(--color-gold);
+    /*color: var(--color-gold);*/
     text-align: center;
     text-transform: uppercase;
+    span{
+      margin-right: 5px;
+    }
+    a{
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    & + .rating{
+      margin-top: 10px;
+    }
+  }
+  &_message{
+    display: none;
+    .modal_title,
+    p{
+      margin-bottom: 0 !important;
+    }
+  }
+  .sms_repeat span{
+    margin-right: 5px;
   }
   .input,
   .textarea{
@@ -334,6 +385,7 @@
     &[type='tel']{
       font-size: 1.125rem !important;
       line-height: 26px !important;
+      padding-top: 10px;
     }
   }
   .label_placeholder{

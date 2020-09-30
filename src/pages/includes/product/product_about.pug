@@ -87,7 +87,7 @@
             .grid-col-lg-6.offset-lg-0.grid-col-md-10.offset-md-1.grid-col-12.feedback_button
               .text.gr
                 | Возможно, именно ваш отзыв поможет сделать кому-то выбор!
-              a.btn.btn_fill.add_testimonial Добавить отзыв
+              a.btn.btn_fill.add_testimonial(data-modal='add_testimonial') Добавить отзыв
           .grid-row.feedback
             .grid-col-12.feedback_item
               .grid-row
@@ -296,7 +296,7 @@
                 | У вас есть вопросы об этом товаре?
                 br
                 | Задайте их нам и мы ответим вам в ближайшее время!
-              a.btn.btn_fill.ask_question Задать вопрос
+              a.btn.btn_fill.ask_a_question(data-modal='ask_a_question') Задать вопрос
           .grid-row.feedback
             .grid-col-12.feedback_item
               .grid-row

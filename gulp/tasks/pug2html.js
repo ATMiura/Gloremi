@@ -10,7 +10,7 @@ module.exports = function pug2html() {
     .pipe(plumber())
     .pipe(pugLinter({ reporter: 'default' }))
     .pipe(pug({pretty: true}))
-    .pipe(htmlValidator())
+    //.pipe(htmlValidator())
     .pipe(bemValidator())
     .pipe(gulp.dest('build'))
 }

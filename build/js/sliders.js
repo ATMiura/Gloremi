@@ -46,12 +46,13 @@ $(document).ready(function () {
     /* слайдер в табах */
     $tab_slidesToShow = 4;
 
-    $(window).on('resize', function () {
+    $(window).on('load resize', function () {
       if ($(window).width() < 992){
         $tab_slidesToShow = 3;
       } else if ($(window).width() < 768){
         $tab_slidesToShow = 2;
       }
+      console.log($tab_slidesToShow);
     });
 
     setTimeout(function () {
@@ -70,7 +71,7 @@ $(document).ready(function () {
                 dots: false,
                 infinite: false,
                 speed: 300,
-                slidesToShow: $tab_slidesToShow,
+                slidesToShow: 4,
                 slidesToScroll: 4,
                 fade: false,
                 arrows: true,
@@ -78,21 +79,21 @@ $(document).ready(function () {
                     {
                         breakpoint: 992,
                         settings: {
-                            slidesToShow: $tab_slidesToShow,
+                            slidesToShow: 3,
                             slidesToScroll: 3,
                         }
                     },
                     {
                         breakpoint: 768,
                         settings: {
-                            slidesToShow: $tab_slidesToShow,
+                            slidesToShow: 2,
                             slidesToScroll: 2
                         }
                     },
                     {
                         breakpoint: 575,
                         settings: {
-                            slidesToShow: $tab_slidesToShow,
+                            slidesToShow: 2,
                             slidesToScroll: 2
                         }
                     }
@@ -108,13 +109,14 @@ $(document).ready(function () {
 
             $(this).on('init afterChange', function (event, slick, currentSlide) {
                 //current_slide = currentSlide < 9 ? `O${currentSlide + 1}` : currentSlide + 1;
-                //console.log(currentSlide/$tab_slidesToShow);
-                if(currentSlide < 9 ){
+                var current_slide = Math.ceil(currentSlide/$tab_slidesToShow)+1;
+                console.log(Math.ceil(currentSlide/$tab_slidesToShow));
+                if(current_slide < 9 ){
                   current_slide_zero = '0';
                 } else {
                   current_slide_zero = '';
                 }
-                $(this).parents('.tab_pane').find('.current').text(current_slide_zero+Math.ceil((currentSlide + 1)/$tab_slidesToShow));
+                $(this).parents('.tab_pane').find('.current').text(current_slide_zero+current_slide);
                 $(this).parents('.tab_pane').find('.total').text(Math.ceil(slick.slideCount/$tab_slidesToShow));
             });
         });

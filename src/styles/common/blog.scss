@@ -9,7 +9,7 @@
 }
 
 .blog_item{
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   .blog_item_inner{
     display: flex;
     flex-direction: column;
@@ -31,6 +31,8 @@
       img{
         max-width: 100%;
         height: auto;
+        display: block;
+        margin: 0 auto;
       }
     }
     .blog_item_content{
@@ -83,6 +85,7 @@
 .post{
   position: relative;
   padding-top: 20px;
+  overflow: hidden;
   &:before{
     content: "";
     display: block;

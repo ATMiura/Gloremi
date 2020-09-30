@@ -61,6 +61,12 @@
     overflow: hidden;
     .product_container{
       display: block;
+      &:not(.slick-slider){
+        .product_card {
+          max-width: 25%;
+          flex: 0 0 25%;
+        }
+      }
     }
   }
   .tab_pane.active{
